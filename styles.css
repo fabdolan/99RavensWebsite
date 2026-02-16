@@ -1973,6 +1973,9 @@ body.has-notification .nav-overlay {
         opacity: 0 !important;
         visibility: hidden !important;
     }
+    body {
+        overflow-y: auto !important;
+    }
     .site-wrapper {
         opacity: 1 !important;
         visibility: visible !important;
@@ -1980,7 +1983,7 @@ body.has-notification .nav-overlay {
         min-height: 100vh;
         overflow: visible !important;
     }
-    
+
     /* Header alignment */
     .header { padding: 1rem 1.75rem; }
     
