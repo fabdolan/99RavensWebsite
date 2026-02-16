@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog CMS Admin | 99Ravens</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/public/logos/24006_99Ravens_Logo_black_FA.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/blog-cms/admin/css/admin.css">
+</head>
+<body>
+    <!-- Admin Header -->
+    <header class="admin-header">
+        <div class="admin-header-content">
+            <div class="admin-logo">
+                <img src="/public/logos/24006_99Ravens_Logo_black_FA.png" alt="99Ravens" class="admin-logo-img">
+                <span class="admin-title">Blog CMS</span>
+            </div>
+            <nav class="admin-nav">
+                <a href="/resources/blogs/" class="admin-nav-link">View Blog</a>
+                <button class="admin-btn admin-btn-primary" id="newPostBtn">New Post</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Main -->
+    <main class="admin-main">
+        <div class="admin-container">
+            <!-- Admin Stats -->
+            <section class="admin-stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalPosts">0</span>
+                    <span class="stat-label">Total Posts</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="publishedPosts">0</span>
+                    <span class="stat-label">Published</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="draftPosts">0</span>
+                    <span class="stat-label">Drafts</span>
+                </div>
+            </section>
+
+            <!-- Filter Bar -->
+            <section class="admin-filters">
+                <div class="filter-group">
+                    <label class="filter-label">Status</label>
+                    <select class="filter-select" id="statusFilter">
+                        <option value="all">All</option>
+                        <option value="published">Published</option>
+                        <option value="draft">Draft</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Category</label>
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="strategy">Strategy</option>
+                        <option value="ai">AI & Technology</option>
+                        <option value="culture">Culture</option>
+                        <option value="case-studies">Case Studies</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <input type="text" class="filter-search" id="searchFilter" placeholder="Search posts...">
+                </div>
+            </section>
+
+            <!-- Posts List -->
+            <section class="admin-posts">
+                <div class="posts-header">
+                    <h2 class="posts-title">All Posts</h2>
+                    <div class="posts-actions">
+                        <button class="admin-btn admin-btn-secondary" id="exportBtn">Export Data</button>
+                    </div>
+                </div>
+                <div class="posts-list" id="postsList">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Post Editor Modal -->
+    <div class="modal" id="editorModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">New Post</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <form class="editor-form" id="editorForm">
+                <div class="form-row">
+                    <div class="form-group form-group-full">
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-input" id="postTitle" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Slug</label>
+                        <input type="text" class="form-input" id="postSlug" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-select" id="postCategory" required>
+                            <option value="strategy">Strategy</option>
+                            <option value="ai">AI & Technology</option>
+                            <option value="culture">Culture</option>
+                            <option value="case-studies">Case Studies</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Author</label>
+                        <input type="text" class="form-input" id="postAuthor" value="99Ravens Team" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Read Time (min)</label>
+                        <input type="number" class="form-input" id="postReadTime" value="5" min="1" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group form-group-full">
+                        <label class="form-label">Excerpt</label>
+                        <textarea class="form-textarea" id="postExcerpt" rows="2" required></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group form-group-full">
+                        <label class="form-label">Content (HTML)</label>
+                        <textarea class="form-textarea form-textarea-large" id="postContent" rows="12" required></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Image URL</label>
+                        <input type="text" class="form-input" id="postImage" placeholder="https://...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Tags (comma separated)</label>
+                        <input type="text" class="form-input" id="postTags" placeholder="AI, Strategy, Marketing">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Status</label>
+                        <select class="form-select" id="postStatus">
+                            <option value="published">Published</option>
+                            <option value="draft">Draft</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-checkbox-label">
+                            <input type="checkbox" id="postFeatured">
+                            <span>Featured Post</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="admin-btn admin-btn-secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="admin-btn admin-btn-primary" id="saveBtn">Save Post</button>
+                </div>
+                <input type="hidden" id="postId">
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-backdrop" id="deleteBackdrop"></div>
+        <div class="modal-content modal-content-small">
+            <div class="modal-header">
+                <h2 class="modal-title">Delete Post</h2>
+                <button class="modal-close" id="deleteModalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this post? This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="admin-btn admin-btn-secondary" id="deleteCancelBtn">Cancel</button>
+                <button class="admin-btn admin-btn-danger" id="deleteConfirmBtn">Delete</button>
+            </div>
+            <input type="hidden" id="deletePostId">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/blog-cms/src/js/blog-data.js"></script>
+    <script src="/blog-cms/admin/js/admin.js"></script>
+</body>
+</html>
+

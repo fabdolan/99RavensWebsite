@@ -1,0 +1,32 @@
+{
+  "name": "99Ravens",
+  "short_name": "99Ravens",
+  "description": "Hire Fractional CMOs & License Expert AI Agents",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#d8d6c5",
+  "theme_color": "#d8d6c5",
+  "icons": [
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+
+
+
+
+
+

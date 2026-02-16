@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — 99Ravens</title>
+    <link rel="icon" type="image/png" href="/public/logos/24006_99Ravens_Logo_black_FA.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-paper: #EBEBE2;
+            --color-orange: #F66302;
+            --text-primary: #1A1A1A;
+            --text-dim: #4A4A4A;
+            --text-muted: #7A7A7A;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Space Mono', monospace;
+            background: var(--color-paper);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .error-code {
+            font-size: 0.7rem;
+            color: var(--color-orange);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+        .error-code::before {
+            content: ':';
+            margin-right: 0.15em;
+        }
+        h1 {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        p {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 400px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .home-link {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--color-orange);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        .home-link:hover {
+            border-bottom-color: var(--color-orange);
+        }
+        .countdown {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-top: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-code">Error 404</div>
+    <h1>Page not found.</h1>
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <a href="/" class="home-link">Return to homepage →</a>
+    <div class="countdown" id="countdown">Redirecting in 5s</div>
+
+    <script>
+        let seconds = 5;
+        const el = document.getElementById('countdown');
+        const timer = setInterval(() => {
+            seconds--;
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = '/';
+            } else {
+                el.textContent = 'Redirecting in ' + seconds + 's';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

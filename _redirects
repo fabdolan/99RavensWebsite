@@ -1,0 +1,10 @@
+/*    /index.html   200
+
+# Block admin panel
+/blog-cms/admin/*    /    404
+
+# Legacy URL redirects
+/about-us    /about    301
+/contact-us  /contact  301
+/request-a-demo    /contact    301
+/request-a-demo/   /contact    301

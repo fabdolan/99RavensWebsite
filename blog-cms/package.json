@@ -1,0 +1,48 @@
+{
+  "name": "99ravens-blog-cms",
+  "version": "1.0.0",
+  "description": "Blog and CMS system for 99Ravens website with content management capabilities",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080",
+    "dev": "npx http-server . -p 8080 -o",
+    "build": "echo 'Static site - no build process required'",
+    "test": "echo 'No tests configured yet'",
+    "lint": "npx htmlhint *.html src/*.html admin/*.html",
+    "format": "npx prettier --write *.html src/**/*.css src/**/*.js admin/**/*.css admin/**/*.js"
+  },
+  "keywords": [
+    "blog",
+    "cms",
+    "content-management",
+    "static-site",
+    "marketing",
+    "99ravens"
+  ],
+  "author": "99Ravens",
+  "license": "MIT",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "http-server": "^14.1.1",
+    "prettier": "^3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/99ravens/blog-cms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/99ravens/blog-cms/issues"
+  },
+  "homepage": "https://99ravens.agency/blog-cms/",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Resources | 99Ravens Blog & Insights</title>
+    <meta name="description" content="Expert insights, strategic perspectives, and cultural commentary from the world's top marketing leaders and strategists.">
+    <meta name="keywords" content="marketing strategy, expert insights, cultural commentary, marketing thought leadership, brand strategy, AI marketing">
+    <meta name="author" content="99Ravens">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Resources | 99Ravens Blog & Insights">
+    <meta property="og:description" content="Expert insights, strategic perspectives, and cultural commentary from the world's top marketing leaders and strategists.">
+    <meta property="og:image" content="/public/og-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/public/logos/24006_99Ravens_Logo_black_FA.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/blog-cms/src/styles/main.css?v=3">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <button class="logo-btn" onclick="location.href='/'">
+            <img src="/public/logos/logo99.png" alt="99Ravens" class="logo-img">
+        </button>
+        <div class="header-right">
+            <button class="menu-toggle" id="menu-toggle">
+                <span class="menu-text">Menu</span>
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Nav Overlay -->
+    <div class="nav-overlay" id="nav-overlay">
+        <nav class="overlay-menu">
+            <a href="/#experts" class="overlay-link">
+                <span class="overlay-num">01</span> For Experts
+            </a>
+            <a href="/#brands" class="overlay-link">
+                <span class="overlay-num">02</span> For Brands
+            </a>
+            <a href="/#builders" class="overlay-link">
+                <span class="overlay-num">03</span> For AI Builders
+            </a>
+            <div class="overlay-divider"></div>
+            <a href="/about" class="overlay-link overlay-link-secondary">About</a>
+            <a href="/resources/blogs/" class="overlay-link overlay-link-secondary">Resources</a>
+            <a href="/contact" class="overlay-link overlay-link-secondary">Contact</a>
+            <a href="https://app.99ravens.ai/u/login" class="overlay-link overlay-link-secondary">Sign in</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="blog-main">
+        <div class="blog-container">
+            <!-- Hero Section -->
+            <section class="blog-hero">
+                <div class="hero-content">
+                    <span class="hero-number">01</span>
+                    <h1 class="blog-hero-title">
+                        Resources &<br>
+                        Strategic <span class="accent">Insights</span>
+                    </h1>
+                    <p class="blog-hero-desc">
+                        Expert perspectives on marketing strategy, cultural trends, and the future of expertise in an AI-driven world.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Category Filter -->
+            <section class="category-section">
+                <div class="category-header">
+                    <h2 class="category-title">Categories</h2>
+                    <div class="category-filters" id="categoryFilters">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="strategy">Strategy</button>
+                        <button class="filter-btn" data-category="ai">AI & Technology</button>
+                        <button class="filter-btn" data-category="culture">Culture</button>
+                        <button class="filter-btn" data-category="case-studies">Case Studies</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Post -->
+            <section class="featured-section">
+                <div class="featured-post" id="featuredPost">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Blog Grid -->
+            <section class="blog-grid-section">
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog posts populated by JavaScript -->
+                </div>
+                
+                <!-- Load More -->
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="loadMoreBtn">Load More</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+        <div class="footer-container">
+            <!-- Top Row: Logo and Primary Nav -->
+            <div class="footer-row footer-top">
+                <a href="/" class="footer-logo">
+                    <img src="/public/logos/logo99.png" alt="99Ravens" class="footer-logo-img">
+                </a>
+                <nav class="footer-primary-nav">
+                    <div class="footer-nav-item">
+                        <a href="/#experts" class="footer-nav-link-main">
+                            <span class="footer-nav-prefix">For</span>
+                            <span class="footer-nav-title">Experts</span>
+                        </a>
+                    </div>
+                    <div class="footer-nav-item">
+                        <a href="/#brands" class="footer-nav-link-main">
+                            <span class="footer-nav-prefix">For</span>
+                            <span class="footer-nav-title">Brands</span>
+                        </a>
+                    </div>
+                    <div class="footer-nav-item">
+                        <a href="/#builders" class="footer-nav-link-main">
+                            <span class="footer-nav-prefix">For</span>
+                            <span class="footer-nav-title">AI Builders</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            
+            <!-- Bottom Row: Secondary Nav and Social -->
+            <div class="footer-row footer-bottom">
+                <nav class="footer-secondary-nav">
+                    <a href="/about" class="footer-secondary-link">About</a>
+                    <a href="/resources/blogs/" class="footer-secondary-link active">Resources</a>
+                    <a href="/contact" class="footer-secondary-link">Contact</a>
+                </nav>
+                <div class="footer-right">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/99ravens-ai" class="social-link" target="_blank" rel="noopener" title="LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@99Ravens" class="social-link" target="_blank" rel="noopener" title="YouTube">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                    <p class="footer-copyright">&copy; 2025 99Ravens. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/blog-cms/src/js/blog-data.js"></script>
+    <script src="/blog-cms/src/js/blog-app.js"></script>
+</body>
+</html>

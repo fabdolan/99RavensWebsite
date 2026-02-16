@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/experts", "destination": "/index.html" },
+    { "source": "/brands", "destination": "/index.html" },
+    { "source": "/builders", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "**/*.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    }
+  ]
+}
+
+
+
