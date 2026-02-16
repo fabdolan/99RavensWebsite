@@ -1,5 +1,7 @@
-# 99Ravens — Theme Guide
-### Quick reference for designers and developers
+# 99Ravens — Website Theme Guide
+### Quick reference for designers and developers working on 99ravens.agency
+
+> **Scope:** This guide covers the **99Ravens website** (99ravens.agency) only — its pages, layouts, and web components. It does not govern other brand assets such as presentations, print materials, or the product dashboard. For the broader brand design system, see `REBUILD-DOCS/99Ravens_Design_System (2).md`.
 
 ---
 
@@ -143,6 +145,140 @@ A 6px fixed bar at the bottom of every page showing the full brand palette:
 | For Experts (01) | `--color-gold` #FFAF11 | Orange numbers |
 | For Brands (02) | `--color-blue` #058FF7 | Orange numbers |
 | For Builders (03) | `--color-lavender` #BAADD4 | Orange numbers |
+
+---
+
+## Page Templates (for designing new pages)
+
+The site uses four distinct page layouts. Any new page should follow one of these patterns or combine elements from them.
+
+### Template A — Hero + Content (Resources / Blog Index)
+Used for: landing pages, listing pages, campaign pages.
+```
+┌─────────────────────────────────┐
+│  Header (logo left, menu right) │
+├─────────────────────────────────┤
+│                                 │
+│  Full-width Hero                │
+│  (color surface — e.g. blue)    │
+│  Label (Layer 2, uppercase)     │
+│  Headline (Layer 1, large)      │
+│  Subtitle (Layer 2, dim)        │
+│                                 │
+├─────────────────────────────────┤
+│                                 │
+│  Paper-surface content area     │
+│  (centered, max-width 1000px)   │
+│  Filter row / content grid      │
+│                                 │
+├─────────────────────────────────┤
+│  Footer (dark surface)          │
+│  Nav links + copyright          │
+├─────────────────────────────────┤
+│  Swatch bar (6px)               │
+└─────────────────────────────────┘
+```
+- Hero uses full-bleed color (blue, gold, lavender, or orange)
+- Text on colored hero surfaces uses `--text-primary` (#1A1A1A)
+- Content area sits on paper surface with paper grain texture
+- Footer is black surface with white text
+
+### Template B — Editorial Split (Section Pages)
+Used for: service detail pages, product pages, methodology pages.
+```
+┌─────────────────────────────────┐
+│  Header                         │
+├─────────────────────┬───────────┤
+│                     │           │
+│  Statement Area     │  Sidebar  │
+│  (paper surface)    │  (sage)   │
+│                     │           │
+│  :LABEL (Layer 2)   │  :HEADER  │
+│  Number + Title     │  01 Item  │
+│                     │  02 Item  │
+│  Big Subtitle       │  03 Item  │
+│  (Layer 1, display) │  04 Item  │
+│                     │           │
+│  ──────────         │           │
+│  Description        │           │
+│  (Layer 2)          │           │
+│                     │           │
+│  [CTA BUTTON]       │           │
+│                     │           │
+├─────────────────────┴───────────┤
+│  Swatch bar                     │
+└─────────────────────────────────┘
+```
+- Grid: `1fr 320px`
+- Left: statement area on paper
+- Right: sage-colored sidebar with numbered index
+- Orange left-edge bar on hover for index items
+- Navigation arrows (prev/next) fixed bottom-right
+
+### Template C — 50/50 Panel (About / Contact)
+Used for: detail overlays, long-form content, information pages.
+```
+┌────────────────┬────────────────┐
+│                │          [X]   │
+│  Logo          │                │
+│                │  Scrollable    │
+│  Hero          │  Content       │
+│  Headline      │                │
+│  (Layer 1)     │  (paragraphs,  │
+│                │   forms,       │
+│                │   maps, etc.)  │
+│  Footer text   │                │
+│  (Layer 2)     │                │
+│                │                │
+└────────────────┴────────────────┘
+```
+- Full-screen overlay (z-index 1000)
+- Left panel: paper surface, vertically justified (logo top, headline middle, footer bottom)
+- Right panel: paper surface, scrollable content area
+- Close button (X) top-right
+- Stacks vertically on mobile (left on top, right below)
+
+### Template D — Homepage Grid
+Used for: homepage only. Included here so designers understand how it works.
+```
+┌─────────────────────────────────┐
+│  Header                         │
+├─────────────────────────────────┤
+│                                 │
+│  Hero Headline (4 lines)        │
+│  (Layer 1 display, word reveal) │
+│                                 │
+├───────────┬───────────┬─────────┤
+│ :Experts  │ :Brands   │:Builders│  ← Nav dock (3 equal columns)
+│  subtitle │  subtitle │ subtitle│
+├───────────┴───────────┼─────────┤
+│                       │ About   │  ← Secondary nav
+│                       │ Resources│
+│                       │ Contact │
+│                       │ Social  │
+├───────────────────────┴─────────┤
+│  Swatch bar                     │
+└─────────────────────────────────┘
+```
+
+### Shared Elements (present on every page)
+- **Header:** Logo (SVG icon + wordmark) left, hamburger menu right. 1px bottom border.
+- **Menu overlay:** Gold background, full-screen. Links to all sections + About, Resources, Contact, Sign in.
+- **Swatch bar:** 6px strip fixed to bottom. Palette order: Paper → Sage → Gold → Orange → Blue → Lavender → Black.
+- **Paper grain texture:** Two-layer SVG noise overlay on all paper surfaces.
+- **Footer** (on blog/resource pages): Black surface, white text, nav links + copyright.
+
+---
+
+## Design Principles (for new pages)
+
+1. **Type leads.** Typography is the primary visual. The first thing the eye should find is a typographic statement.
+2. **Emptiness is material.** Space creates tension and focus. A surface that is 70–80% empty is deliberate.
+3. **Restraint signals confidence.** One idea per surface. One accent per composition. Calm surrounding intensity.
+4. **Color commits.** When a surface uses color, it fills the whole area. No floating colored cards on neutral backgrounds.
+5. **Sharp edges.** Zero border-radius everywhere (except pills/tags). 1px borders only.
+6. **The colon is a brand mark.** Use `:` (in orange) before category labels. It signals "this belongs to a system."
+7. **B&W photography only.** High-contrast, editorial quality. No color photos. When used, they fill a major area.
 
 ---
 

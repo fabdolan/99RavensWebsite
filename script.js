@@ -228,14 +228,6 @@ const navItems = document.querySelectorAll('.nav-item');
 const overlayLinks = document.querySelectorAll('.overlay-link');
 const secondaryLinks = document.querySelectorAll('.secondary-link');
 
-// Form Modal Elements
-const formModal = document.getElementById('form-modal');
-const formModalBackdrop = document.getElementById('form-modal-backdrop');
-const formModalClose = document.getElementById('form-modal-close');
-const formModalTitle = document.getElementById('form-modal-title');
-const formModalIntro = document.getElementById('form-modal-intro');
-const formModalBody = document.getElementById('form-modal-body');
-
 // Notification Strip Elements
 const notificationStrip = document.getElementById('notification-strip');
 const notificationClose = document.getElementById('notification-close');
@@ -283,36 +275,17 @@ if (notificationClose) {
     notificationClose.addEventListener('click', dismissNotificationStrip);
 }
 
-// Form configurations for each section
-const formConfig = {
-    experts: {
-        title: 'Apply for Representation',
-        intro: '',
-        portalId: '47610301',
-        formId: '6369ed2c-613a-4227-9cc7-ac6abd2241bd',
-        region: 'na1'
-    },
-    brands: {
-        title: 'Work With Us',
-        intro: '',
-        portalId: '47610301',
-        formId: 'cfa21d81-f838-4853-998b-8cbcad4c7ba5',
-        region: 'na1'
-    },
-    builders: {
-        title: 'Book a Technical Consultation',
-        intro: '',
-        portalId: '47610301',
-        formId: '88ea389a-1420-4817-b1b9-71cb1a1702c9',
-        region: 'na1'
-    }
+// Email subjects for each section CTA
+const ctaEmailSubjects = {
+    experts: 'Expert Representation Inquiry',
+    brands: 'Brand Partnership Inquiry',
+    builders: 'Technical Consultation Inquiry'
 };
 
 // State
 let hasEntered = false;
 let heroAnimated = false;
 let currentSectionIndex = 0;
-let currentFormSection = null;
 const sectionOrder = ['experts', 'brands', 'builders'];
 
 // Check if mobile device
@@ -470,11 +443,12 @@ function openSection(sectionId, updateHistory = true) {
         });
     });
     
-    // Wire up CTA button to open form modal
+    // Wire up CTA button to send email
     const ctaBtn = sectionGrid.querySelector('.section-cta');
     if (ctaBtn) {
         ctaBtn.addEventListener('click', () => {
-            openFormModal(sectionId);
+            const subject = ctaEmailSubjects[sectionId] || 'Inquiry';
+            window.location.href = `mailto:hello@99ravens.ai?subject=${encodeURIComponent(subject)}`;
         });
     }
     
@@ -640,71 +614,6 @@ function handleInitialRoute() {
     }
 }
 
-// Form Modal Functions
-function openFormModal(sectionId) {
-    const config = formConfig[sectionId];
-    if (!config) return;
-    
-    currentFormSection = sectionId;
-    
-    // Update modal content
-    formModalTitle.textContent = config.title;
-    formModalIntro.textContent = config.intro;
-    
-    // Clear previous form
-    formModalBody.innerHTML = '';
-    
-    // Check if form ID exists
-    if (!config.formId) {
-        formModalBody.innerHTML = '<p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.85rem;">Form coming soon. Please contact us at <a href="mailto:hello@99ravens.ai" class="text-link">hello@99ravens.ai</a></p>';
-    } else {
-        // Create HubSpot form container
-        const formContainer = document.createElement('div');
-        formContainer.className = 'hs-form-frame';
-        formContainer.setAttribute('data-region', config.region);
-        formContainer.setAttribute('data-form-id', config.formId);
-        formContainer.setAttribute('data-portal-id', config.portalId);
-        formModalBody.appendChild(formContainer);
-        
-        // Trigger HubSpot to render the form — retry up to 5s if script hasn't loaded yet
-        function renderHubSpotForm(attempts) {
-            if (window.hbspt && window.hbspt.forms) {
-                try {
-                    formModalBody.innerHTML = '';
-                    window.hbspt.forms.create({
-                        region: config.region,
-                        portalId: config.portalId,
-                        formId: config.formId,
-                        target: '.form-modal-body'
-                    });
-                } catch (e) {
-                    formModalBody.innerHTML = '<p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.85rem;">Unable to load the form. Please contact us at <a href="mailto:hello@99ravens.ai" class="text-link">hello@99ravens.ai</a></p>';
-                }
-            } else if (attempts > 0) {
-                formModalBody.innerHTML = '<p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.85rem;">Loading form...</p>';
-                setTimeout(() => renderHubSpotForm(attempts - 1), 500);
-            } else {
-                formModalBody.innerHTML = '<p style="color: var(--text-dim); font-family: var(--font-mono); font-size: 0.85rem;">Unable to load the form. Please contact us at <a href="mailto:hello@99ravens.ai" class="text-link">hello@99ravens.ai</a></p>';
-            }
-        }
-        renderHubSpotForm(10);
-    }
-    
-    // Show modal
-    formModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeFormModal() {
-    formModal.classList.remove('active');
-    document.body.style.overflow = '';
-    currentFormSection = null;
-}
-
-// Make functions globally available
-window.openFormModal = openFormModal;
-window.closeFormModal = closeFormModal;
-
 // Event Listeners
 navItems.forEach(item => {
     item.addEventListener('click', () => {
@@ -765,19 +674,10 @@ document.querySelectorAll('.overlay-link-secondary').forEach(link => {
 navArrowPrev.addEventListener('click', goToPrevSection);
 navArrowNext.addEventListener('click', goToNextSection);
 
-// Form modal close handlers
-if (formModalClose) {
-    formModalClose.addEventListener('click', closeFormModal);
-}
-if (formModalBackdrop) {
-    formModalBackdrop.addEventListener('click', closeFormModal);
-}
-
 // Keyboard
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        if (formModal && formModal.classList.contains('active')) closeFormModal();
-        else if (detailPanel.classList.contains('active')) closeDetail();
+        if (detailPanel.classList.contains('active')) closeDetail();
         else if (navOverlay.classList.contains('active')) toggleMenu();
         else if (body.classList.contains('page-open')) resetToHome();
     }
@@ -786,7 +686,7 @@ document.addEventListener('keydown', (e) => {
         introSkip.click();
     }
     // Arrow keys for section navigation
-    if (body.classList.contains('page-open') && !detailPanel.classList.contains('active') && !(formModal && formModal.classList.contains('active'))) {
+    if (body.classList.contains('page-open') && !detailPanel.classList.contains('active')) {
         if (e.key === 'ArrowLeft') goToPrevSection();
         if (e.key === 'ArrowRight') goToNextSection();
     }

@@ -10,7 +10,7 @@ Every distinct UI element on the 99Ravens site, how it's built, and what CSS cla
 ```
 .notification-strip
   .notification-content
-    span.notification-label ("New")
+    span.notification-label ("Latest Article")
     a.notification-link (text + optional arrow)
   button.notification-close (two rotated spans forming X)
 ```
