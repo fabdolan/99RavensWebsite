@@ -3,96 +3,101 @@ const submenuData = {
     experts: {
         number: '01',
         title: 'For Experts',
-        subtitle: 'The talent agency for marketing experts and their AI.',
-        desc: "The marketing world extracts your expertise. Software eats scraps of your thinking. Employers claim your IP. Platforms train on your data. We are the antidote. We don't just broker deals; we package brilliance. We help you build, sell, and protect your expertise as a scalable asset.",
-        indexTitle: 'Services',
+        subtitle: 'Your expertise is the most valuable thing AI has never captured.',
+        desc: "The software industry extracts from experts. Platforms train on your data. SaaS commoditizes your work. Nobody has built the infrastructure to work for expert knowledge workers. We did. 99Ravens works 1:1 with senior practitioners to codify your Strategic Signature \u2014 the decision parameters, mental models, and methods that define how you think \u2014 into AI tools you own entirely. Then we represent you.",
+        indexTitle: 'How It Works',
         items: [
-            { 
-                key: 'platform', 
-                title: 'We are your Platform.', 
-                desc: 'We provide the enterprise-grade AI stack and the ex-Google product team to build your "Strategic Signature" into working software. Zero up-front cost.' 
+            {
+                key: 'codify',
+                title: 'We codify your knowledge.',
+                desc: 'Through a deep, iterative process, we extract what you know but have never articulated \u2014 your Strategic Signature. This isn\u2019t a questionnaire. It\u2019s a structured engagement designed to surface the tacit knowledge that defines your expertise.'
             },
-            { 
-                key: 'agent', 
-                title: 'We are your Agent.', 
-                desc: 'We handle the business; you handle the strategy. We negotiate software licensing, secure advisory retainers, and manage your speaking and personal brand.' 
+            {
+                key: 'build',
+                title: 'We build your AI.',
+                desc: 'An engineering team with ex-Google product leadership turns your Strategic Signature into working software \u2014 bespoke agents, research tools, and workflow automations. No up-front cost.'
             },
-            { 
-                key: 'moat', 
-                title: 'We are your Moat.', 
-                desc: 'The only model where you truly own your strategic work. We provide the legal framework to guarantee 100% ownership of your ideas, frameworks, data, and AI agents.' 
+            {
+                key: 'own',
+                title: 'You own everything.',
+                desc: 'Your ideas, your frameworks, your data, your AI. We provide the legal framework guaranteeing 100% ownership. This is non-negotiable.'
+            },
+            {
+                key: 'represent',
+                title: 'We represent you.',
+                desc: '99Ravens is your talent agency. We negotiate software licensing deals, secure advisory retainers, and manage speaking and personal brand opportunities. You focus on the work. We scale your reach.'
             }
         ],
         cta: 'Apply for Representation'
     },
-    brands: {
+    enterprises: {
         number: '02',
-        title: 'For Brands',
-        subtitle: 'Expert humans delivering strategy and software.',
-        desc: "The traditional agency model is broken: you pay for hours, get junior talent, and receive static PowerPoints. We offer a new delivery model. Access the world's top 1% of strategic minds— work with them directly and access their personal suite of AI applications.",
-        indexTitle: 'Solutions',
+        title: 'For Enterprises',
+        subtitle: 'Expert knowledge is the AI quality gap. It evades extraction by design.',
+        desc: "The most valuable knowledge in your organization is undocumented, uncodified, and unstructured. It lives inside your best people \u2014 in their judgment, their decision parameters, their intuition. Fine tuning can\u2019t reach it. Standard operating procedures can\u2019t capture it. Centralized tools can\u2019t scale it. 99Ravens brings a rigorous, academically grounded methodology for codifying tacit knowledge into working software. Your expertise. On your stack.",
+        indexTitle: 'What We Deliver',
         items: [
-            { 
-                key: 'licensing', 
-                title: 'Expert AI Licensing', 
-                desc: 'License AI agents and workflows built by world-class marketing CMOs, Creatives, and Strategists. Scale their expert-level methodologies for briefing, planning, and creative instantly across your teams.' 
+            {
+                key: 'training',
+                title: 'Training',
+                desc: 'Hands-on workshops where your teams leave with personal AI tools, not slide decks. A full program covering adoption, trust, and workflow integration.'
             },
-            { 
-                key: 'advisory', 
-                title: 'Human Advisory', 
-                desc: 'Direct engagements with our roster of C-suite experts for high-level direction, governance, and complex problem solving.' 
+            {
+                key: 'consulting',
+                title: 'Consulting',
+                desc: 'We assess how your organization\u2019s knowledge actually works \u2014 where expertise lives, how decisions get made, what\u2019s undocumented \u2014 and design expertise systems around it.'
             },
-            { 
-                key: 'hybrid', 
-                title: 'Hybrid Execution', 
-                desc: 'The ultimate force multiplier. Our experts set the vision; we design proprietary AI agents so you can execute the workflows. Speed without sacrificing strategic depth.' 
+            {
+                key: 'building',
+                title: 'Building',
+                desc: 'Custom development of expertise systems \u2014 AI agents, knowledge bases, and workflow automations built on your organization\u2019s own knowledge. Working code, deployed on your infrastructure.'
             },
-            { 
-                key: 'custom', 
-                title: 'Custom Architecture', 
-                desc: "Work with our product team and experts to build your own AI agents—custom infrastructure trained on your brand's specific data and strategy." 
+            {
+                key: 'licensing',
+                title: 'Expert Licensing',
+                desc: 'License AI agents and workflows built by experts on the 99Ravens roster. Access their methodologies for briefing, planning, strategy, and creative work \u2014 without a direct advisory engagement.'
             }
         ],
         cta: 'Work with us'
     },
-    builders: {
+    developers: {
         number: '03',
-        title: 'For Builders',
-        subtitle: 'Build on the stack expert marketers use.',
-        desc: "Giving everyone Copilot isn't a strategic investment; it's a dependency. Don't force your team to use generic AI. Build your own proprietary agents using the same enterprise-grade platform we use to power the world's top marketers. Because we are expert marketers, we know how to build AI that actually delivers high-quality strategic thinking.",
-        indexTitle: 'Offerings',
+        title: 'For Developers',
+        subtitle: 'Focus on expertise, not infrastructure.',
+        desc: "We open source everything that isn\u2019t built for a client. The value is in the knowledge, not the code. Our agent orchestration platform is the same stack we use to codify expert knowledge \u2014 purpose-built for expertise systems with a consumer-grade front end. Fork it and skip the architecture decisions that stall enterprise AI projects.",
+        indexTitle: "What\u2019s Available",
         items: [
-            { 
-                key: 'platform-licensing', 
-                title: 'Flexible Platform Licensing', 
-                desc: 'Deploy the 99Ravens expert stack where you need it. Available as a managed SaaS solution, deployed in your private cloud (VPC), or integrated directly into Gemini for Enterprise.' 
+            {
+                key: 'platform',
+                title: 'Agent Orchestration Platform',
+                desc: 'The full stack we use with expert knowledge workers \u2014 open source. Fork it, deploy it, build expertise systems on infrastructure that\u2019s already been designed for the problem.'
             },
-            { 
-                key: 'ai-ops', 
-                title: 'Managed AI Ops', 
-                desc: 'We handle the technical lifecycle. From building and testing to deploying and maintaining, we ensure your internal marketing AI is always operational and up-to-date.' 
+            {
+                key: 'managed',
+                title: 'Managed Services',
+                desc: 'We build on the platform so you don\u2019t have to. Custom development, ongoing maintenance, and deployment \u2014 your expertise systems, managed by the team that built the stack.'
             },
-            { 
-                key: 'custom-building', 
-                title: 'Custom Agent Building', 
-                desc: 'We capture your organization\'s tribal wisdom and tacit knowledge, transforming your unique "way of working" into proprietary AI agents that think like your best people.' 
+            {
+                key: 'agent-design',
+                title: 'Agent Design Services',
+                desc: 'We codify your organization\u2019s expert knowledge into working agents. The same methodology we use with senior practitioners, applied to your people and your workflows.'
             },
-            { 
-                key: 'change-management', 
-                title: 'Training & Change Management', 
-                desc: "We don't just ship code; we train your marketers to work with AI. A full program to ensure adoption, trust, and workflow integration." 
+            {
+                key: 'training',
+                title: 'Training & Change Management',
+                desc: 'We train teams to work with AI built on expert knowledge. Adoption, trust, and workflow integration \u2014 not just deployment.'
             }
         ],
-        cta: 'Book a technical consultation'
+        cta: 'Request access to the repo'
     }
 };
 
 const contentData = {
     'about': {
         title: 'About Us',
-        headline: 'Software is worthless.<br>Expertise is everything.',
-        tagline: 'Software is worthless. Expertise is everything.',
-        footerText: 'The entire software industry isn\'t built to serve experts—it\'s built to extract from them. Employers want to own their knowledge. Platforms want to use it for training data. So we built the antidote.',
+        headline: 'Expertise is everything.',
+        tagline: 'Expertise is everything.',
+        footerText: 'The software industry extracts from experts. Platforms train on their data. SaaS commoditizes their work. So we built the antidote.',
         content: `
             <div class="letter">
                 <p>After 12 years leading marketing teams at Google, I left with one core belief: as big tech commoditized execution, strategy was the only thing left that mattered.</p>
@@ -278,15 +283,15 @@ if (notificationClose) {
 // Email subjects for each section CTA
 const ctaEmailSubjects = {
     experts: 'Expert Representation Inquiry',
-    brands: 'Brand Partnership Inquiry',
-    builders: 'Technical Consultation Inquiry'
+    enterprises: 'Enterprise Partnership Inquiry',
+    developers: 'Technical Consultation Inquiry'
 };
 
 // State
 let hasEntered = false;
 let heroAnimated = false;
 let currentSectionIndex = 0;
-const sectionOrder = ['experts', 'brands', 'builders'];
+const sectionOrder = ['experts', 'enterprises', 'developers'];
 
 // Check if mobile device
 const isMobile = window.innerWidth <= 768;
@@ -412,7 +417,7 @@ function openSection(sectionId, updateHistory = true) {
         </div>
 
         <div class="section-right">
-            <div class="index-header">${data.indexTitle || 'Services'}</div>
+            <div class="index-header">${data.indexTitle || 'How It Works'}</div>
     `;
 
     data.items.forEach((item, i) => {
@@ -457,8 +462,8 @@ function openSection(sectionId, updateHistory = true) {
     navOverlay.classList.remove('active');
     
     // Update URL
-    const urlMap = { experts: '/experts', brands: '/brands', builders: '/builders' };
-    const seoKeyMap = { experts: 'experts', brands: 'brands', builders: 'builders' };
+    const urlMap = { experts: '/experts', enterprises: '/enterprises', developers: '/developers' };
+    const seoKeyMap = { experts: 'experts', enterprises: 'enterprises', developers: 'developers' };
     if (updateHistory !== false) {
         history.pushState({ page: 'section', section: sectionId }, '', urlMap[sectionId] || `/${sectionId}`);
     }
@@ -581,8 +586,8 @@ function handleInitialRoute() {
     // Map URL paths to sections/content
     const routeMap = {
         '/experts': { type: 'section', id: 'experts' },
-        '/brands': { type: 'section', id: 'brands' },
-        '/builders': { type: 'section', id: 'builders' },
+        '/enterprises': { type: 'section', id: 'enterprises' },
+        '/developers': { type: 'section', id: 'developers' },
         '/about': { type: 'detail', id: 'about' },
         '/contact': { type: 'detail', id: 'contact' },
     };

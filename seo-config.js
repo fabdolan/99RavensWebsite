@@ -19,50 +19,50 @@ const SEO_CONFIG = {
         
         // HOME PAGE
         home: {
-            title: '99Ravens | Hire Expert Marketers & License their Enterprise-grade AI',
-            description: "The world's first talent agency for the AI age. Hire top Chief Marketers, Strategists and Creatives, or license their verified, expert-trained AI agents.",
-            keywords: 'AI talent agency, marketing experts, CMO, fractional executive, AI agents, expert AI, marketing AI, enterprise AI',
+            title: '99Ravens | Expert Knowledge Becomes AI',
+            description: 'We turn expert knowledge into AI. We work with senior practitioners to codify their tacit knowledge into AI tools they own \u2014 then bring that methodology to enterprises and release what we learn as open source.',
+            keywords: 'expert knowledge, tacit knowledge, expertise codification, Strategic Signature, AI agents, expertise systems, knowledge infrastructure, open source AI, expert AI, marketing AI',
             image: 'https://99ravens.agency/public/og-image.png'
         },
-        
+
         // FOR EXPERTS
         experts: {
-            title: '99Ravens | The Talent Agency for Marketing Experts',
-            description: 'We represent expert CMOs, Creatives and Strategists. We help you build Personal AI, represent you for consulting and software licensing deals, and protect your intellectual property.',
-            keywords: 'expert representation, CMO talent agency, strategist representation, AI expertise, intellectual property, knowledge monetization',
+            title: '99Ravens | Codify What You Know. Own What You Build.',
+            description: '99Ravens works 1:1 with senior practitioners to codify their Strategic Signature into AI tools they own. We build it, you own it, we represent you.',
+            keywords: 'expert representation, Strategic Signature, expertise codification, AI tools, intellectual property, knowledge monetization',
             image: 'https://99ravens.agency/public/og-image.png'
         },
-        
-        // FOR BRANDS
-        brands: {
-            title: '99Ravens | Hire Expert Marketers & License Their AI',
-            description: 'Hire fractional CMOs and Strategists to lead your team, or license their custom AI agents to upgrade your own marketing stack.',
-            keywords: 'expert AI licensing, marketing strategy, fractional CMO, AI marketing agents, brand strategy, executive advisory',
+
+        // FOR ENTERPRISES
+        enterprises: {
+            title: '99Ravens | Expertise Systems Built on Your Organization\u2019s Knowledge',
+            description: 'The AI quality gap is expert knowledge. We bring a rigorous methodology for codifying tacit knowledge into working software \u2014 training, consulting, and custom builds on your stack.',
+            keywords: 'expertise systems, tacit knowledge, enterprise AI, knowledge codification, AI consulting, custom AI development',
             image: 'https://99ravens.agency/public/og-image.png'
         },
-        
-        // FOR BUILDERS
-        builders: {
-            title: '99Ravens | The Enterprise Marketing AI Platform The Experts Use',
-            description: 'The only agent orchestration platform built for expert marketers. License the platform to build your own custom agents, or deploy our pre-trained expert AIs out-of-the-box.',
-            keywords: 'AI platform, enterprise AI, marketing AI infrastructure, custom AI agents, AI ops, AI development, agent orchestration',
+
+        // FOR DEVELOPERS
+        developers: {
+            title: '99Ravens | Open Source Tools for Expertise Codification',
+            description: 'An open source agent orchestration platform purpose-built for expertise systems. Fork the same stack we use with expert knowledge workers.',
+            keywords: 'open source AI, agent orchestration, expertise systems, AI platform, AI development, developer tools',
             image: 'https://99ravens.agency/public/og-image.png'
         },
-        
+
         // ABOUT
         about: {
-            title: '99Ravens | Software is Worthless. Expertise is Everything.',
-            description: 'The Story of 99Ravens: Why We Built the Talent Agency For Expert Marketers.',
-            keywords: '99Ravens about, Fab Dolan, intellectual talent agency, AI age, expert monetization, Google marketing',
-            ogTitle: 'The Story of 99Ravens: Why We Built the Talent Agency For Expert Marketers',
+            title: '99Ravens | Expertise is Everything.',
+            description: 'The story of 99Ravens \u2014 how a failed SaaS platform led to a methodology for turning expert knowledge into AI.',
+            keywords: '99Ravens about, Fab Dolan, expertise codification, AI age, expert knowledge, Google marketing',
+            ogTitle: '99Ravens | Expertise is Everything.',
             image: 'https://99ravens.agency/public/og-image.png'
         },
-        
+
         // CONTACT
         contact: {
-            title: '99Ravens | Contact 99Ravens',
-            description: 'Apply for representation as an expert, or book a consultation to discuss consulting and licensing of one of our experts.',
-            keywords: '99Ravens contact, expert representation inquiry, AI licensing contact, marketing consultation',
+            title: '99Ravens | Get in Touch',
+            description: 'Apply for expert representation, explore enterprise engagements, or talk to our team about building expertise systems.',
+            keywords: '99Ravens contact, expert representation inquiry, enterprise engagement, expertise systems',
             image: 'https://99ravens.agency/public/og-image.png'
         },
     }
