@@ -19,7 +19,7 @@ All values pixel-sampled from the Underline Studio brand book.
 | `--color-blue` | `#058FF7` | Accent — "For Brands" section color |
 | `--color-lavender` | `#BAADD4` | Accent — "For Builders" section color |
 | `--color-gold` | `#FFAF11` | Accent highlight — "For Experts" section, notification badge |
-| `--color-menu-gold` | `#C8A84E` | Menu overlay background |
+| `--color-menu-gold` | `#C8A84E` | Menu overlay background, intro video background |
 | `--color-black` | `#000000` | Borders, dark surfaces, notification strip |
 
 ### Text Colors
@@ -111,11 +111,11 @@ The brand's most characteristic layout: two unequal zones separated by a vertica
   grid-template-rows: 1fr minmax(150px, auto);
 }
 /* Row 1: Hero headline spanning full width */
-/* Row 2 left: 3-column nav dock (Experts | Brands | Builders) */
+/* Row 2 left: Nav items (Experts | Enterprises | Developers) */
 /* Row 2 right: Secondary nav (About, Resources, Contact, social) */
 ```
 
-**Section pages (Experts / Brands / Builders):**
+**Section pages (Experts / Enterprises / Developers):**
 ```css
 .section-content {
   grid-template-columns: 1fr 320px;
@@ -311,7 +311,7 @@ All black-and-white, high-contrast, editorial quality. No color photography. Whe
 | `max-height: 600px` | Very short viewports | Minimal padding |
 | `max-width: 1200px` | Medium-large screens | — |
 | `max-width: 900px` | Tablets | Sidebar narrows to 240px, then stacks |
-| `max-width: 768px` | Mobile phones | Grid → single column, intro hidden, panels stack |
+| `max-width: 768px` | Mobile phones | Grid → single column, intro plays with contain, `.main-content` scrolls, panels stack |
 | `max-width: 600px` | Small mobile | Form modal adjustments |
 
 ---

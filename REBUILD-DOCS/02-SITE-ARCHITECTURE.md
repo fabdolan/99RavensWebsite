@@ -31,7 +31,7 @@ STATE 7: RESOURCES → standalone pages (index + articles)
 > **MANDATORY: This intro video is a sourced brand asset. It MUST be preserved in any rebuild. The video file and the session-gating logic below are non-negotiable.**
 
 **URL:** / (initial load only)
-**Video file:** `/public/animations/intro.mov` (1.16MB — do not replace or regenerate)
+**Video file:** `/public/animations/intro.mp4` (2.7MB, 5668x3774 landscape — do not replace or regenerate)
 
 ### First-Visit-Only Gating Logic
 
@@ -40,7 +40,7 @@ The intro plays **exactly once per browser session**, then never again until the
 1. **First visit in session:** Video plays. User watches, then enters site.
 2. **Return visit in same session:** Intro skipped. User goes straight to home.
 3. **New session (browser reopened):** Video plays again.
-4. **Mobile (width <= 768px):** Intro ALWAYS skipped.
+4. **Mobile (width <= 768px):** Intro plays with `object-fit: contain` and `#C8A84E` background. Enter button scales up for touch targets.
 
 ### Implementation
 - `sessionStorage` (not `localStorage`) — resets when browser session ends
@@ -62,8 +62,8 @@ The intro plays **exactly once per browser session**, then never again until the
 **URL:** /
 
 ### Content Hierarchy (in order of importance)
-1. **Hero message** — The primary brand statement (4 lines of text, see Content Bible)
-2. **Section navigation** — 3 audience entry points: Experts, Brands, Builders
+1. **Hero message** — The primary brand statement (2 lines of headline text + description paragraph, see Content Bible)
+2. **Section navigation** — 3 audience entry points: Experts, Enterprises, Developers
 3. **Secondary navigation** — About, Resources, Contact
 4. **Social links** — LinkedIn, YouTube
 5. **Persistent header** — Logo + Menu button (present on all states)
@@ -89,7 +89,7 @@ The intro plays **exactly once per browser session**, then never again until the
 
 ## STATE 3: SECTION PAGE
 
-**URLs:** /experts, /brands, /builders
+**URLs:** /experts, /enterprises, /developers
 **3 sections, navigable sequentially**
 
 ### Content Hierarchy Per Section
@@ -103,9 +103,9 @@ The intro plays **exactly once per browser session**, then never again until the
 
 | Section | # of Index Items | CTA Text |
 |---------|-----------------|----------|
-| Experts | 3 | Apply for Representation |
-| Brands | 4 | Work with us |
-| Builders | 4 | Book a technical consultation |
+| Experts | 4 | Apply for Representation |
+| Enterprises | 4 | Work with us |
+| Developers | 4 | Request access to the repo |
 
 ### Functional Requirements
 - User can navigate between sections (prev/next)
@@ -125,7 +125,7 @@ The intro plays **exactly once per browser session**, then never again until the
 ### Content: About (/about)
 
 **Information hierarchy:**
-1. **Headline** — "Software is worthless. Expertise is everything."
+1. **Headline** — "Expertise is everything."
 2. **Philosophy statement** — Summary of the company's reason for existing
 3. **Founder letter** — 10-paragraph first-person narrative (full text in Content Bible)
 4. **Signature block** — Photo, name (linked to LinkedIn), title
@@ -247,7 +247,7 @@ Arrives at /experts or /about → Intro skipped if returning → Lands directly 
 Arrives at /resources/blogs/ (or direct article link) → Reads article → May click through to related articles → May navigate to main site via header logo or menu
 
 ### Flow 5: Mobile
-Intro always skipped → Home (responsive) → All content scrollable → Same functional states but layout adapts to single column
+Intro video plays (object-fit: contain) → Home (responsive, single column) → `.main-content` scrolls if content exceeds viewport → Same functional states but layout adapts to single column
 
 ---
 
@@ -257,10 +257,12 @@ Intro always skipped → Home (responsive) → All content scrollable → Same f
 |-----|-------|------|
 | / | Home | SPA |
 | /experts | Section: Experts | SPA |
-| /brands | Section: Brands | SPA |
-| /builders | Section: Builders | SPA |
+| /enterprises | Section: Enterprises | SPA |
+| /developers | Section: Developers | SPA |
 | /about | Detail: About | SPA |
 | /contact | Detail: Contact | SPA |
+| /brands | 301 redirect to /enterprises | Vercel redirect |
+| /builders | 301 redirect to /developers | Vercel redirect |
 | /resources/blogs/ | Resource Index | Separate HTML |
 | /resources/blogs/[slug]/ | Article Page | Separate HTML |
 
@@ -288,8 +290,8 @@ Intro always skipped → Home (responsive) → All content scrollable → Same f
 
 - All states must work on mobile (down to 320px width)
 - All states must work on short viewports (down to 750px height, for laptops)
-- Intro video is skipped on mobile
-- Content must be scrollable on mobile (not locked to viewport height)
+- Intro video plays on mobile with `object-fit: contain` and scaled-up Enter button
+- Content must be scrollable on mobile (`.main-content` is the scroll container)
 - Designer determines how layout adapts — this doc does not prescribe mobile layouts
 
 ---

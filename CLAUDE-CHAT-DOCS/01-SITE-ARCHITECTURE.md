@@ -13,10 +13,10 @@ This is a **single-page application** built without a framework. One `index.html
 ### Core Files (4 files = the entire main site)
 | File | Purpose | Lines |
 |------|---------|-------|
-| `index.html` | HTML shell: header, hero, nav dock, section layer, detail panel, form modal | 234 |
-| `styles.css` | All CSS: variables, layout, components, animations, responsive breakpoints | 1951 |
-| `script.js` | All JS: data objects, routing, DOM manipulation, event handlers, animations | 741 |
-| `seo-config.js` | SEO metadata per route, updates `<meta>` tags on navigation | 117 |
+| `index.html` | HTML shell: header, hero, nav dock, section layer, detail panel, form modal | ~280 |
+| `styles.css` | All CSS: variables, layout, components, animations, responsive breakpoints | ~2070 |
+| `script.js` | All JS: data objects, routing, DOM manipulation, event handlers, animations | ~750 |
+| `seo-config.js` | SEO metadata per route, updates `<meta>` tags on navigation | ~120 |
 
 ### How Routing Works
 1. User lands on `index.html` (always, via Vercel rewrite rules)
@@ -27,7 +27,7 @@ This is a **single-page application** built without a framework. One `index.html
 
 ### How Content Is Stored
 All page content lives as **JavaScript objects** inside `script.js`:
-- `submenuData` object: content for Experts, Brands, Builders sections (titles, descriptions, service items, CTAs)
+- `submenuData` object: content for Experts, Enterprises, Developers sections (titles, descriptions, service items, CTAs)
 - `contentData` object: content for About and Contact pages (headlines, body HTML, footer text)
 - `formConfig` object: HubSpot form IDs for each section's CTA form
 
@@ -36,8 +36,8 @@ There is no database, no CMS, no markdown files for the main site. Content is ha
 ### Page States / Views
 The site has 4 visual states, all achieved by toggling CSS classes:
 
-1. **Home** (default): Hero text + 3-column nav dock + secondary nav
-2. **Section** (Experts/Brands/Builders): Section layer slides up from bottom, showing a two-column layout (statement left, index right)
+1. **Home** (default): Hero text + 3 vertically-stacked nav items (mobile) or 2-column grid (desktop) + secondary nav
+2. **Section** (Experts/Enterprises/Developers): Section layer slides up from bottom, showing a two-column layout (statement left, index right)
 3. **Detail** (About/Contact): Full-screen overlay panel, two-column layout (hero left, content right)
 4. **Form Modal**: Dark backdrop overlay with centered HubSpot form
 
@@ -97,8 +97,9 @@ All animations are CSS-only:
 
 On mobile (768px and below):
 - Grid collapses to single column
-- Intro video is hidden entirely
-- Nav dock stacks vertically
+- Intro video plays with `object-fit: contain` (background: #C8A84E to match video)
+- Enter button scales up for mobile tap targets
+- Nav items stack vertically; `.main-content` is the scroll container if content exceeds viewport
 - Detail panels stack vertically (left on top, right below)
 - Section panels stack vertically
 - Close button becomes fixed position
@@ -119,3 +120,5 @@ Vercel rewrites all routes to `index.html` (SPA pattern). Key redirects:
 - `/request-a-demo*` -> `/contact`
 - `/about-us*` -> `/about`
 - `/blog-cms/admin*` -> `/404` (hidden)
+- `/brands` -> `/enterprises` (301 permanent redirect)
+- `/builders` -> `/developers` (301 permanent redirect)

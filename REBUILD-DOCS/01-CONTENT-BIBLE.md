@@ -18,7 +18,7 @@ Expertise becomes :software.
 Anything but artificial.
 
 ### Meta Description (Home)
-The world's first talent agency for the AI age. Hire top Chief Marketers, Strategists and Creatives, or license their verified, expert-trained AI agents.
+We turn expert knowledge into AI. We work with senior practitioners to codify their tacit knowledge into AI tools they own. That methodology extends to enterprises, and everything we learn goes open source.
 
 ---
 
@@ -32,25 +32,24 @@ The world's first talent agency for the AI age. Hire top Chief Marketers, Strate
 
 ## 2. HOME PAGE — HERO
 
-### Hero Lines (4 lines, staggered word-reveal animation)
+### Hero Lines (2 lines)
 ```
-Line 1: Representing
-Line 2: the world's top
-Line 3: marketing experts.
-Line 4: Building the future of their expertise.
+Line 1: Expertise is
+Line 2: the algorithm.
 ```
 
-Line 4 is styled as `.accent` (italic, lighter weight, muted color).
+### Hero Description
+We turn expert knowledge into AI. We work with senior practitioners to codify their tacit knowledge — the unwritten judgment that defines how they think — into AI tools they own. That methodology extends to enterprises, and everything we learn goes open source.
 
 ---
 
-## 3. HOME PAGE — BOTTOM NAV DOCK (3 columns)
+## 3. HOME PAGE — NAV ITEMS
 
-| Column | Prefix | Title | Links To |
-|--------|--------|-------|----------|
-| 1 | : | Experts | /experts |
-| 2 | : | Brands | /brands |
-| 3 | : | Builders | /builders |
+| # | Title | Description | Links To |
+|---|-------|-------------|----------|
+| 01 | For Experts | We codify what you know. You own everything we build. | /experts |
+| 02 | For Enterprises | Expert knowledge systems. Built on what your best people actually know. | /enterprises |
+| 03 | For Developers | Open source tools for expertise codification. Fork the stack. | /developers |
 
 ---
 
@@ -72,9 +71,9 @@ Line 4 is styled as `.accent` (italic, lighter weight, muted color).
 
 ### Primary Nav (numbered)
 ```
-01  For Experts      → /experts
-02  For Brands       → /brands
-03  For Builders     → /builders
+01  For Experts        → /experts
+02  For Enterprises    → /enterprises
+03  For Developers     → /developers
 ```
 
 ### Secondary Nav
@@ -100,93 +99,103 @@ Anything but artificial.
 01 FOR EXPERTS
 
 ### Subtitle (Display Font)
-The talent agency for marketing experts and their AI.
+Your expertise is the most valuable thing AI has never captured.
 
 ### Description
-The marketing world extracts your expertise. Software eats scraps of your thinking. Employers claim your IP. Platforms train on your data. We are the antidote. We don't just broker deals; we package brilliance. We help you build, sell, and protect your expertise as a scalable asset.
+The software industry extracts from experts. Platforms train on your data. SaaS commoditizes your work. Nobody has built the infrastructure to work for expert knowledge workers. We did. 99Ravens works 1:1 with senior practitioners to codify your Strategic Signature — the decision parameters, mental models, and methods that define how you think — into AI tools you own entirely. Then we represent you.
 
 ### CTA Button
 Apply for Representation
 
-### Services Index
+### Sidebar Header
+How It Works
+
+### Services Index (4 items)
 
 | # | Title | Description |
 |---|-------|-------------|
-| 01 | We are your Platform. | We provide the enterprise-grade AI stack and the ex-Google product team to build your "Strategic Signature" into working software. Zero up-front cost. |
-| 02 | We are your Agent. | We handle the business; you handle the strategy. We negotiate software licensing, secure advisory retainers, and manage your speaking and personal brand. |
-| 03 | We are your Moat. | The only model where you truly own your strategic work. We provide the legal framework to guarantee 100% ownership of your ideas, frameworks, data, and AI agents. |
+| 01 | We codify your knowledge. | Through a deep, iterative process, we extract what you know but have never articulated — your Strategic Signature. This isn't a questionnaire. It's a structured engagement designed to surface the tacit knowledge that defines your expertise. |
+| 02 | We build your AI. | An engineering team with ex-Google product leadership turns your Strategic Signature into working software — bespoke agents, research tools, and workflow automations. No up-front cost. |
+| 03 | You own everything. | Your ideas, your frameworks, your data, your AI. We provide the legal framework guaranteeing 100% ownership. This is non-negotiable. |
+| 04 | We represent you. | 99Ravens is your talent agency. We negotiate software licensing deals, secure advisory retainers, and manage speaking and personal brand opportunities. You focus on the work. We scale your reach. |
 
 ### SEO
-- **Title:** 99Ravens | The Talent Agency for Marketing Experts
-- **Description:** We represent expert CMOs, Creatives and Strategists. We help you build Personal AI, represent you for consulting and software licensing deals, and protect your intellectual property.
+- **Title:** 99Ravens | Codify What You Know. Own What You Build.
+- **Description:** We work 1:1 with senior practitioners to codify tacit knowledge into AI tools they own. Then we represent them for licensing, advisory, and speaking.
 
 ---
 
-## 7. SECTION: FOR BRANDS (/brands)
+## 7. SECTION: FOR ENTERPRISES (/enterprises)
 
 ### Label
-02 FOR BRANDS
+02 FOR ENTERPRISES
 
 ### Subtitle (Display Font)
-Expert humans delivering strategy and software.
+Expert knowledge is the Enterprise AI quality gap.
 
 ### Description
-The traditional agency model is broken: you pay for hours, get junior talent, and receive static PowerPoints. We offer a new delivery model. Access the world's top 1% of strategic minds— work with them directly and access their personal suite of AI applications.
+The most valuable knowledge in your organization is undocumented, uncodified, and unstructured. It lives inside your best people — in their judgment, their decision parameters, their intuition. Fine tuning can't reach it. Standard operating procedures can't capture it. Centralized tools can't scale it. 99Ravens brings a rigorous, academically grounded methodology for codifying tacit knowledge into working software. Your expertise. On your stack.
 
 ### CTA Button
 Work with us
+
+### Sidebar Header
+What We Deliver
 
 ### Solutions Index
 
 | # | Title | Description |
 |---|-------|-------------|
-| 01 | Expert AI Licensing | License AI agents and workflows built by world-class marketing CMOs, Creatives, and Strategists. Scale their expert-level methodologies for briefing, planning, and creative instantly across your teams. |
-| 02 | Human Advisory | Direct engagements with our roster of C-suite experts for high-level direction, governance, and complex problem solving. |
-| 03 | Hybrid Execution | The ultimate force multiplier. Our experts set the vision; we design proprietary AI agents so you can execute the workflows. Speed without sacrificing strategic depth. |
-| 04 | Custom Architecture | Work with our product team and experts to build your own AI agents—custom infrastructure trained on your brand's specific data and strategy. |
+| 01 | Training | Hands-on workshops where your teams leave with personal AI tools, not slide decks. A full program covering adoption, trust, and workflow integration. |
+| 02 | Consulting | We assess how your organization's knowledge actually works — where expertise lives, how decisions get made, what's undocumented — and design expertise systems around it. |
+| 03 | Building | Custom development of expertise systems — AI agents, knowledge bases, and workflow automations built on your organization's own knowledge. Working code, deployed on your infrastructure. |
+| 04 | Expert Licensing | License AI agents and workflows built by experts on the 99Ravens roster. Access their methodologies for briefing, planning, strategy, and creative work — without a direct advisory engagement. |
 
 ### SEO
-- **Title:** 99Ravens | Hire Expert Marketers & License Their AI
-- **Description:** Hire fractional CMOs and Strategists to lead your team, or license their custom AI agents to upgrade your own marketing stack.
+- **Title:** 99Ravens | Expertise Systems Built on Your Organization's Knowledge
+- **Description:** We codify the tacit knowledge inside your organization into working AI systems. Training, consulting, custom development, and expert licensing.
 
 ---
 
-## 8. SECTION: FOR BUILDERS (/builders)
+## 8. SECTION: FOR DEVELOPERS (/developers)
 
 ### Label
-03 FOR BUILDERS
+03 FOR DEVELOPERS
 
 ### Subtitle (Display Font)
-Build on the stack expert marketers use.
+Focus on expertise, not infrastructure.
 
 ### Description
-Giving everyone Copilot isn't a strategic investment; it's a dependency. Don't force your team to use generic AI. Build your own proprietary agents using the same enterprise-grade platform we use to power the world's top marketers. Because we are expert marketers, we know how to build AI that actually delivers high-quality strategic thinking.
+We open source everything that isn't built for a client. The value is in the knowledge, not the code. Our agent orchestration platform is the same stack we use to codify expert knowledge — purpose-built for expertise systems with a consumer-grade front end. Fork it and skip the architecture decisions that stall enterprise AI projects.
 
 ### CTA Button
-Book a technical consultation
+Request access to the repo (mailto:hello@99ravens.ai)
+
+### Sidebar Header
+What's Available
 
 ### Offerings Index
 
 | # | Title | Description |
 |---|-------|-------------|
-| 01 | Flexible Platform Licensing | Deploy the 99Ravens expert stack where you need it. Available as a managed SaaS solution, deployed in your private cloud (VPC), or integrated directly into Gemini for Enterprise. |
-| 02 | Managed AI Ops | We handle the technical lifecycle. From building and testing to deploying and maintaining, we ensure your internal marketing AI is always operational and up-to-date. |
-| 03 | Custom Agent Building | We capture your organization's tribal wisdom and tacit knowledge, transforming your unique "way of working" into proprietary AI agents that think like your best people. |
-| 04 | Training & Change Management | We don't just ship code; we train your marketers to work with AI. A full program to ensure adoption, trust, and workflow integration. |
+| 01 | Agent Orchestration Platform | The full stack we use with expert knowledge workers — open source. Fork it, deploy it, build expertise systems on infrastructure that's already been designed for the problem. |
+| 02 | Managed Services | We build on the platform so you don't have to. Custom development, ongoing maintenance, and deployment — your expertise systems, managed by the team that built the stack. |
+| 03 | Agent Design Services | We codify your organization's expert knowledge into working agents. The same methodology we use with senior practitioners, applied to your people and your workflows. |
+| 04 | Training & Change Management | We train teams to work with AI built on expert knowledge. Adoption, trust, and workflow integration — not just deployment. |
 
 ### SEO
-- **Title:** 99Ravens | The Enterprise Marketing AI Platform The Experts Use
-- **Description:** The only agent orchestration platform built for expert marketers. License the platform to build your own custom agents, or deploy our pre-trained expert AIs out-of-the-box.
+- **Title:** 99Ravens | Open Source Tools for Expertise Codification
+- **Description:** Fork our agent orchestration platform, use our open source tools, or hire us to build expertise systems on the stack we use with the world's top practitioners.
 
 ---
 
 ## 9. DETAIL PANEL: ABOUT (/about)
 
 ### Panel Left — Hero Headline
-Software is worthless.<br>Expertise is everything.
+Expertise is everything.
 
 ### Panel Left — Footer Text
-The entire software industry isn't built to serve experts—it's built to extract from them. Employers want to own their knowledge. Platforms want to use it for training data. So we built the antidote.
+The software industry extracts from experts. Platforms train on their data. SaaS commoditizes their work. So we built the antidote.
 
 ### Panel Right — Founder Letter (full text)
 
@@ -220,8 +229,8 @@ We give experts the tools to build, but more importantly, we provide the model f
 - **Title:** Founder, 99Ravens
 
 ### SEO
-- **Title:** 99Ravens | Software is Worthless. Expertise is Everything.
-- **Description:** The Story of 99Ravens: Why We Built the Talent Agency For Expert Marketers.
+- **Title:** 99Ravens | Expertise is Everything.
+- **Description:** Why we built a company around expert knowledge. The story of 99Ravens, from Google to the first talent agency for the AI age.
 
 ---
 
@@ -263,8 +272,8 @@ The office locations are displayed as a constellation/knowledge graph SVG with n
 | Section | Modal Title | Portal ID | Form ID |
 |---------|-------------|-----------|---------|
 | Experts | Apply for Representation | 47610301 | 6369ed2c-613a-4227-9cc7-ac6abd2241bd |
-| Brands | Work With Us | 47610301 | cfa21d81-f838-4853-998b-8cbcad4c7ba5 |
-| Builders | Book a Technical Consultation | 47610301 | 88ea389a-1420-4817-b1b9-71cb1a1702c9 |
+| Enterprises | Work With Us | 47610301 | cfa21d81-f838-4853-998b-8cbcad4c7ba5 |
+| Developers | Request access to the repo | N/A | mailto:hello@99ravens.ai |
 
 HubSpot region: na1
 

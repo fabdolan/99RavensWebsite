@@ -3,48 +3,53 @@
 ## Main Site (SPA - all rendered by index.html)
 
 ### / (Home)
-- Hero headline: "Representing the world's top marketing experts. Building the future of their expertise."
-- 3-column navigation dock: For Experts | For Brands | For AI Builders
+- Hero headline: "Expertise is the algorithm."
+- Hero description: "We turn expert knowledge into AI. We work with senior practitioners to codify their tacit knowledge — the unwritten judgment that defines how they think — into AI tools they own. That methodology extends to enterprises, and everything we learn goes open source."
+- 3 navigation items: For Experts | For Enterprises | For Developers
 - Secondary nav: About | Resources | Contact
 - Social links: LinkedIn, YouTube
 - Notification strip (dismissible, links to Substack article)
-- Intro video overlay (first visit only, skipped on mobile)
+- Intro video overlay (first visit only, plays on all devices including mobile)
 
 ### /experts (For Experts)
 - Section number: 01
-- Subtitle: "The talent agency for marketing experts and their AI."
-- Description paragraph about how the marketing world extracts expertise
+- Subtitle: "Your expertise is the most valuable thing AI has never captured."
+- Description paragraph about the software industry extracting from experts
+- Sidebar header: "How It Works"
 - Services index (right sidebar):
-  1. "We are your Platform." - AI stack, zero up-front cost
-  2. "We are your Agent." - Business negotiation, licensing, brand
-  3. "We are your Moat." - IP ownership, legal framework
+  1. "We codify your knowledge." - Academically grounded methodology for tacit knowledge extraction
+  2. "We build your AI." - Enterprise-grade product team, zero up-front cost
+  3. "You own everything." - 100% IP ownership, legal framework
+  4. "We represent you." - Licensing, advisory retainers, speaking, personal brand
 - CTA: "Apply for Representation" -> HubSpot form (ID: 6369ed2c-613a-4227-9cc7-ac6abd2241bd)
 
-### /brands (For Brands)
+### /enterprises (For Enterprises)
 - Section number: 02
-- Subtitle: "Expert humans delivering strategy and software."
-- Description paragraph about broken agency model
+- Subtitle: "Expert knowledge is the Enterprise AI quality gap."
+- Description paragraph about undocumented organizational knowledge
+- Sidebar header: "What We Deliver"
 - Solutions index (right sidebar):
-  1. "Expert AI Licensing" - License AI agents from expert CMOs
+  1. "Expert AI Systems" - Working software built on codified expert knowledge
   2. "Human Advisory" - Direct C-suite expert engagements
-  3. "Hybrid Execution" - Expert vision + AI agent execution
-  4. "Custom Architecture" - Build custom AI agents on your data
+  3. "Hybrid Execution" - Expert vision + AI execution at scale
+  4. "Custom Knowledge Architecture" - Bespoke knowledge codification infrastructure
 - CTA: "Work with us" -> HubSpot form (ID: cfa21d81-f838-4853-998b-8cbcad4c7ba5)
 
-### /builders (For AI Builders)
+### /developers (For Developers)
 - Section number: 03
-- Subtitle: "Build on the stack expert marketers use."
-- Description paragraph about generic AI vs proprietary agents
+- Subtitle: "Open source tools for codifying what experts know."
+- Description paragraph about open-sourcing methodology and tools
+- Sidebar header: "What's Available"
 - Offerings index (right sidebar):
-  1. "Flexible Platform Licensing" - SaaS, VPC, or Gemini integration
-  2. "Managed AI Ops" - Full technical lifecycle management
-  3. "Custom Agent Building" - Tribal wisdom into AI agents
-  4. "Training & Change Management" - Adoption and workflow integration
-- CTA: "Book a technical consultation" -> HubSpot form (ID: 88ea389a-1420-4817-b1b9-71cb1a1702c9)
+  1. "Tacit Knowledge Extraction Framework" - Open source interview + codification methodology
+  2. "Expert Model Fine-Tuning Toolkit" - Tools for structured fine-tuning from expert transcripts
+  3. "Knowledge Graph Builder" - Map expert reasoning into structured, queryable graphs
+  4. "Evaluation & Drift Detection" - Benchmark and monitor whether AI still reasons like the expert
+- CTA: "Request access to the repo" -> mailto:hello@99ravens.ai
 
 ### /about (About)
-- Left panel headline: "Software is worthless. Expertise is everything."
-- Left panel footer: "The entire software industry isn't built to serve experts..."
+- Left panel headline: "Expertise is everything."
+- Left panel footer: "The software industry extracts from experts. Platforms train on their data. SaaS commoditizes their work. So we built the antidote."
 - Right panel: Founder's letter (Fab Dolan)
   - 12 years at Google -> started a company -> failed -> pivoted to talent agency model
   - Signed with founder image and LinkedIn link
@@ -52,7 +57,7 @@
 
 ### /contact (Contact)
 - Left panel headline: "Real intelligence."
-- Left panel footer: "Software is nothing without human expertise..."
+- Left panel footer: "Software is nothing without human expertise. Contact us to build, license, or hire the expertise you need."
 - Right panel:
   - General Inquiries: hello@99ravens.ai
   - Expert Representation: representation@99ravens.ai
@@ -90,18 +95,18 @@
 
 ### Hamburger Menu
 - 01 For Experts
-- 02 For Brands
-- 03 For AI Builders
+- 02 For Enterprises
+- 03 For Developers
 - ---divider---
 - About
 - Resources (links to /resources/blogs/)
 - Contact
 - Sign in (links to https://app.99ravens.ai/u/login)
 
-### Home Page Nav Dock (bottom of page)
-- For Experts | For Brands | For AI Builders
+### Home Page Nav Items (stacked vertically on mobile, 2-column grid on desktop)
+- For Experts | For Enterprises | For Developers
 
-### Home Page Secondary Nav (bottom right)
+### Home Page Secondary Nav (bottom right on desktop)
 - About | Resources | Contact
 - LinkedIn icon | YouTube icon
 
@@ -109,6 +114,10 @@
 - Left/Right arrows (bottom right corner)
 - Keyboard: ArrowLeft / ArrowRight
 - Escape: close section, go home
+
+## URL Redirects (301 Permanent)
+- /brands -> /enterprises
+- /builders -> /developers
 
 ## External Links
 - LinkedIn: https://www.linkedin.com/company/99ravens-ai

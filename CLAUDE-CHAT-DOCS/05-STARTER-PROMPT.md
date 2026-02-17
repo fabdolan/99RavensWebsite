@@ -7,7 +7,7 @@ Copy everything below the line and paste it as your first message in a new Claud
 I need you to rebuild a website with a completely new visual theme. I'm providing the full source code and documentation of the existing site so you understand the structure, content, and functionality. Your job is to recreate this site with the same content, navigation, and behavior but apply my new theme (which I'll describe/provide separately).
 
 ## What This Site Is
-A single-page application (SPA) for 99Ravens, a talent agency for marketing experts in the AI age. It's built with vanilla HTML, CSS, and JavaScript (no framework, no build tools). One `index.html` file handles all routes using the browser History API.
+A single-page application (SPA) for 99Ravens — we turn expert knowledge into AI. It's built with vanilla HTML, CSS, and JavaScript (no framework, no build tools). One `index.html` file handles all routes using the browser History API. Three audience sections: For Experts, For Enterprises, For Developers.
 
 ## Attached Files — Read All of These First
 
@@ -15,10 +15,10 @@ A single-page application (SPA) for 99Ravens, a talent agency for marketing expe
 2. **02-SITEMAP.md** — Every page/route, what content appears on each, navigation structure, all CTAs and their form IDs, all external links
 3. **03-DESIGN-SYSTEM.md** — The CURRENT theme (colors, typography, spacing, animations, hover states, visual signature). You will REPLACE this theme with my new one, but use this as a reference for what design decisions need to be made.
 4. **04-COMPONENT-INVENTORY.md** — Every UI component, its CSS classes, HTML structure, and behavior. These components need to exist in the rebuild with equivalent functionality.
-5. **index.html** — The main HTML file (234 lines)
-6. **styles.css** — All CSS (1951 lines)
-7. **script.js** — All JavaScript logic, content data, routing, event handlers (741 lines)
-8. **seo-config.js** — SEO metadata per page (117 lines)
+5. **index.html** — The main HTML file (~280 lines)
+6. **styles.css** — All CSS (~2070 lines)
+7. **script.js** — All JavaScript logic, content data, routing, event handlers (~750 lines)
+8. **seo-config.js** — SEO metadata per page (~120 lines)
 9. **persona.md** — Brand voice and personality guidelines
 
 ## What I Need You To Do

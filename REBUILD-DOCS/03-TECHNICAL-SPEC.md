@@ -31,7 +31,7 @@ website-main/
 ├── seo-config.js                 # SEO metadata per route
 ├── public/
 │   ├── animations/
-│   │   └── intro.mov             # Intro video (1.16MB)
+│   │   └── intro.mp4             # Intro video (2.7MB, 5668x3774 landscape)
 │   ├── font/
 │   │   ├── ESKlarheitKurrent-Rg.woff2       # Display font — regular
 │   │   ├── ESKlarheitKurrent-Bd.woff2       # Display font — bold
@@ -127,7 +127,7 @@ website-main/
 /* Surfaces */
 --surface-paper: #EFECE3;     /* Primary background — warm beige */
 --surface-sage: #C5C2B0;      /* Secondary surface — muted green/taupe */
---surface-gold: #C8A84E;      /* Gold — intro, overlay background */
+--surface-gold: #C8A84E;      /* Gold — intro video background, overlay background */
 --surface-blue: #1E97FC;      /* Electric blue — heroes, highlights */
 --surface-lavender: #B4A8CE;  /* Purple — article heroes, accents */
 --surface-dark: #1E1C19;      /* Near-black — footers, dark panels */
@@ -172,7 +172,7 @@ LinkedIn and YouTube SVG icons are inline (24x24 or 14x14 viewBox, simple single
 ### Main SPA: `script.js`
 
 **Data structures at top of file:**
-- `submenuData` — Content for 3 section pages (experts, brands, builders). Each contains: number, title, subtitle, desc, indexTitle, items[], cta.
+- `submenuData` — Content for 3 section pages (experts, enterprises, developers). Each contains: number, title, subtitle, desc, indexTitle, items[], cta.
 - `contentData` — Content for 2 detail panels (about, contact). Each contains: title, headline, tagline, footerText, content (HTML string).
 - `formConfig` — HubSpot form IDs for 3 sections.
 
@@ -181,7 +181,7 @@ LinkedIn and YouTube SVG icons are inline (24x24 or 14x14 viewBox, simple single
 - `heroAnimated` — Whether hero word animation has run
 - `currentSectionIndex` — Which section (0-2) is active
 - `currentFormSection` — Which form modal is open
-- `sectionOrder` — ['experts', 'brands', 'builders']
+- `sectionOrder` — ['experts', 'enterprises', 'developers']
 
 **Key functions:**
 | Function | Purpose |
@@ -362,7 +362,7 @@ When rebuilding from approved mockups:
 
 6. **Preserve blog content exactly.** The 14 blog posts in `blog-data.js` contain full article HTML. Do not modify article content.
 
-7. **Preserve URL structure.** All SPA routes (/experts, /brands, /builders, /about, /contact) and blog routes (/resources/blogs/[slug]/) must resolve correctly.
+7. **Preserve URL structure.** All SPA routes (/experts, /enterprises, /developers, /about, /contact) and blog routes (/resources/blogs/[slug]/) must resolve correctly. 301 redirects exist for legacy URLs (/brands → /enterprises, /builders → /developers).
 
 8. **Preserve Google Analytics.** The GA4 tracking ID (G-YQSPJRDC08) must remain in `<head>`.
 
@@ -370,7 +370,7 @@ When rebuilding from approved mockups:
 
 10. **The presentation deck (`sales preso/`) and theme guide (`Notes (Walkie Talkie) Scoping/99R Feb15 Theme.md`) are the canonical brand references.** When mockups reference brand language, visual patterns, or design energy, defer to these documents.
 
-11. **The intro video (`/public/animations/intro.mov`) is a sourced brand asset and MUST be preserved.** It plays once per browser session (first visit only), is skipped on mobile, and uses `sessionStorage` (not `localStorage`) so it resets when the browser session ends. Do not replace, regenerate, or remove this video. The session-gating logic is documented in `02-SITE-ARCHITECTURE.md` under STATE 1.
+11. **The intro video (`/public/animations/intro.mp4`) is a sourced brand asset and MUST be preserved.** It plays once per browser session (first visit only) on all devices including mobile. On mobile it uses `object-fit: contain` with `#C8A84E` background. Uses `sessionStorage` (not `localStorage`) so it resets when the browser session ends. Do not replace, regenerate, or remove this video. The session-gating logic is documented in `02-SITE-ARCHITECTURE.md` under STATE 1.
 
 ---
 
