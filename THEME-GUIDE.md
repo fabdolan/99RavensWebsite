@@ -14,10 +14,10 @@
 | `--color-paper` | `#EBEBE2` | Primary background — warm off-white |
 | `--color-sage` | `#D2D0BD` | Secondary surface — sidebar backgrounds |
 | `--color-orange` | `#F66302` | Primary accent — CTAs, links, active states |
-| `--color-blue` | `#058FF7` | Accent — "For Brands" hover state |
-| `--color-lavender` | `#BAADD4` | Accent — "For Builders" hover state |
-| `--color-gold` | `#FFAF11` | Accent highlight — intro animation bg, notification badge |
-| `--color-menu-gold` | `#C8A84E` | Menu overlay background (matches intro video yellow) |
+| `--color-blue` | `#058FF7` | Accent — "For Enterprises" hover state |
+| `--color-lavender` | `#BAADD4` | Accent — "For Developers" hover state |
+| `--color-gold` | `#FFAF11` | Accent highlight — notification badge |
+| `--color-menu-gold` | `#C8A84E` | Menu overlay background, intro video background |
 | `--color-black` | `#000000` | Borders, dark surface |
 
 ### Semantic Tokens
@@ -105,7 +105,7 @@ Both `body::before` and `body::after` create a layered paper feel:
 
 ### Visual Markers
 - **Vertical rule:** 1px line in left margin (`opacity: 0.15`), marks editorial column
-- **Orange colon prefix:** `:` before all section labels and sidebar headers (e.g., `:Home`, `:Services`)
+- **Orange colon prefix:** `:` before all section labels and sidebar headers (e.g., `:Home`, `:How It Works`)
 - **Orange left-edge bar:** 3px orange bar on hover for nav items and index items (`scaleY` animation)
 - **Horizontal rules:** Thin separators at `opacity: 0.15–0.25`
 
@@ -143,8 +143,8 @@ A 6px fixed bar at the bottom of every page showing the full brand palette:
 | Section | Hover Color | Accent |
 |---------|-------------|--------|
 | For Experts (01) | `--color-gold` #FFAF11 | Orange numbers |
-| For Brands (02) | `--color-blue` #058FF7 | Orange numbers |
-| For Builders (03) | `--color-lavender` #BAADD4 | Orange numbers |
+| For Enterprises (02) | `--color-blue` #058FF7 | Orange numbers |
+| For Developers (03) | `--color-lavender` #BAADD4 | Orange numbers |
 
 ---
 
@@ -241,24 +241,34 @@ Used for: detail overlays, long-form content, information pages.
 ### Template D — Homepage Grid
 Used for: homepage only. Included here so designers understand how it works.
 ```
-┌─────────────────────────────────┐
-│  Header                         │
-├─────────────────────────────────┤
-│                                 │
-│  Hero Headline (4 lines)        │
-│  (Layer 1 display, word reveal) │
-│                                 │
-├───────────┬───────────┬─────────┤
-│ :Experts  │ :Brands   │:Builders│  ← Nav dock (3 equal columns)
-│  subtitle │  subtitle │ subtitle│
-├───────────┴───────────┼─────────┤
-│                       │ About   │  ← Secondary nav
-│                       │ Resources│
-│                       │ Contact │
-│                       │ Social  │
-├───────────────────────┴─────────┤
-│  Swatch bar                     │
-└─────────────────────────────────┘
+Desktop:
+┌─────────────────────────────────────────┐
+│  Header                                 │
+├──────────────────────────┬──────────────┤
+│                          │              │
+│  :Home                   │  Explore     │
+│  Hero Headline (2 lines) │  01 Experts  │
+│  (Layer 1 display)       │  02 Enterpr. │
+│  ─────────               │  03 Develop. │
+│  Description paragraph   │              │
+│                          │              │
+├──────────────────────────┴──────────────┤
+│  Swatch bar                             │
+└─────────────────────────────────────────┘
+
+Mobile (stacked, .main-content scrolls if needed):
+┌─────────────────────┐
+│  Header             │
+├─────────────────────┤
+│  :Home              │
+│  Hero Headline      │
+│  Description        │
+├─────────────────────┤
+│  Explore            │
+│  01 For Experts     │
+│  02 For Enterprises │
+│  03 For Developers  │
+└─────────────────────┘
 ```
 
 ### Shared Elements (present on every page)
