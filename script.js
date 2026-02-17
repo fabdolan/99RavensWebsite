@@ -299,8 +299,8 @@ const isMobile = window.innerWidth <= 768;
 // Check if user is navigating from within the same site (e.g. Resources page)
 const isInternalNav = document.referrer && new URL(document.referrer).origin === window.location.origin;
 
-// Init - show intro video on first visit, skip if navigating internally or on mobile
-if (isMobile || isInternalNav) {
+// Init - show intro video on first visit, skip if navigating internally
+if (isInternalNav) {
     intro.classList.add('hidden');
     siteWrapper.classList.add('visible');
     hasEntered = true;
