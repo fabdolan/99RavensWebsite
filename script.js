@@ -33,7 +33,7 @@ const submenuData = {
     enterprises: {
         number: '02',
         title: 'For Enterprises',
-        subtitle: 'Expert knowledge is the AI quality gap. It evades extraction by design.',
+        subtitle: 'Expert knowledge is the Enterprise AI quality gap.',
         desc: "The most valuable knowledge in your organization is undocumented, uncodified, and unstructured. It lives inside your best people \u2014 in their judgment, their decision parameters, their intuition. Fine tuning can\u2019t reach it. Standard operating procedures can\u2019t capture it. Centralized tools can\u2019t scale it. 99Ravens brings a rigorous, academically grounded methodology for codifying tacit knowledge into working software. Your expertise. On your stack.",
         indexTitle: 'What We Deliver',
         items: [
