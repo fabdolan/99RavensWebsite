@@ -1976,9 +1976,11 @@ body.has-notification .nav-overlay {
     .site-wrapper {
         opacity: 1 !important;
         visibility: visible !important;
-        height: auto !important;
-        min-height: 100vh;
-        overflow: visible !important;
+        height: 100vh !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch;
     }
 
     /* Header alignment */
@@ -1987,14 +1989,14 @@ body.has-notification .nav-overlay {
     /* Stack to single column on mobile */
     .layout-grid { grid-template-columns: 1fr; grid-template-rows: auto auto; }
 
-    .cell-headline { grid-column: 1; grid-row: 1; padding: 2rem 1.5rem 1.5rem; min-height: 50vh; }
+    .cell-headline { grid-column: 1; grid-row: 1; padding: 1.5rem 1.5rem 1rem; min-height: 40vh; }
     .cell-headline::before { display: none; }
     .hero-label { padding-left: 0; }
     .hero-statement { padding-left: 0; padding-right: 0; }
     .hero-footer { padding-left: 0; padding-right: 0; max-height: none; }
     .cell-nav { grid-column: 1; grid-row: 2; border-left: none; border-top: var(--border-width) solid var(--black); }
     .nav-header { padding: 1.5rem 1.75rem 1rem; }
-    .nav-item { padding: 1.25rem 1.75rem; }
+    .nav-item { padding: 1rem 1.5rem; }
     .nav-item:hover .nav-desc { color: var(--text-primary); }
     .nav-title { font-size: 1.1rem; }
     .header-social { display: none; }
