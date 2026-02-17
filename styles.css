@@ -1982,19 +1982,17 @@ body.has-notification .nav-overlay {
         opacity: 1 !important;
         visibility: visible !important;
         height: 100vh !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
-        -webkit-overflow-scrolling: touch;
+        overflow: hidden !important;
     }
 
     /* Header alignment */
-    .header { padding: 1rem 1.75rem; }
-    
-    /* Stack to single column on mobile */
-    .layout-grid { grid-template-columns: 1fr; grid-template-rows: auto auto; height: auto; }
-    .main-content { flex: 0 0 auto; }
+    .header { padding: 1rem 1.75rem; flex-shrink: 0; }
 
-    .cell-headline { grid-column: 1; grid-row: 1; padding: 1.5rem 1.5rem 1rem; min-height: 40vh; }
+    /* Stack to single column on mobile — fill available height exactly */
+    .main-content { flex: 1; min-height: 0; }
+    .layout-grid { grid-template-columns: 1fr; grid-template-rows: 1fr auto; height: 100%; }
+
+    .cell-headline { grid-column: 1; grid-row: 1; padding: 1.5rem 1.5rem 1rem; min-height: 0; }
     .cell-headline::before { display: none; }
     .hero-label { padding-left: 0; }
     .hero-statement { padding-left: 0; padding-right: 0; }
