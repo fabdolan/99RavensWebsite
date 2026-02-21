@@ -10,7 +10,7 @@ categoryLabel: ":Case Studies"
 excerpt: "99Ravens helps scale a veteran marketer's knowledge when he's forced to step back from his business by making an AI Agent for his team."
 image: https://99ravens.agency/wp-content/uploads/2025/09/Untitled-design-1024x576.png
 imageAlt: ""
-status: published
+status: draft
 type: article
 substack: false
 readTime: 3

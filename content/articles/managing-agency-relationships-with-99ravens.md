@@ -10,7 +10,7 @@ categoryLabel: ":Case Studies"
 excerpt: "A sporting goods company managing seven agency relationships taps 99Ravens to conduct the flow of information and boost brand compliance."
 image: ""
 imageAlt: ""
-status: published
+status: draft
 type: article
 substack: false
 readTime: 3
