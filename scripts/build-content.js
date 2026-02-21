@@ -79,7 +79,7 @@ function buildArticleCtaBlock() {
     <div class="article-cta-label">Work with us</div>
     <h3>Expert knowledge becomes working software.</h3>
     <p>We codify expertise for senior practitioners and the enterprises that want to build with it. Tell us what you're solving.</p>
-    <a href="https://99ravens.agency/contact" class="article-cta-btn">Start a conversation</a>
+    <a href="mailto:hello@99ravens.ai" class="article-cta-btn">Start a conversation</a>
   </div>`;
 }
 
@@ -97,7 +97,7 @@ function buildCaseStudyCtaBlock() {
     <div class="inline-cta-label">Next step</div>
     <div class="inline-cta-headline">Your expertise deserves the same infrastructure.</div>
     <div class="inline-cta-body">We build expertise systems for organizations that want AI trained on how their best people think.</div>
-    <a href="https://99ravens.agency/contact" class="btn-cta">Work with us</a>
+    <a href="mailto:hello@99ravens.ai" class="btn-cta">Work with us</a>
   </div>`;
 }
 
@@ -106,7 +106,7 @@ function buildWhitepaperCtaBlock() {
     <div class="inline-cta-label">Work with us</div>
     <div class="inline-cta-headline">Expert knowledge becomes working software.</div>
     <div class="inline-cta-body">We codify expertise for senior practitioners and the enterprises that want to build with it. Tell us what you're solving.</div>
-    <a href="https://99ravens.agency/contact" class="btn-cta">Start a conversation</a>
+    <a href="mailto:hello@99ravens.ai" class="btn-cta">Start a conversation</a>
   </div>`;
 }
 
