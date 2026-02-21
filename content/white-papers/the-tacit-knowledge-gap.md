@@ -10,7 +10,7 @@ categoryLabel: ":White Papers"
 excerpt: "Why enterprise AI fails at the last mile — and what organizations that get it right are doing differently."
 image: ""
 imageAlt: ""
-status: published
+status: draft
 type: white-paper
 substack: false
 gated: false

@@ -3,24 +3,6 @@ const blogData = {
   posts: [
     {
       id: 1,
-      title: "The Tacit Knowledge Gap",
-      slug: "the-tacit-knowledge-gap",
-      excerpt: "Why enterprise AI fails at the last mile — and what organizations that get it right are doing differently.",
-      author: "Fab Dolan",
-      authorTitle: "Founder, 99Ravens",
-      category: "white-papers",
-      categoryLabel: ":White Papers",
-      tags: [],
-      featured: false,
-      image: "",
-      readTime: null,
-      publishedAt: "Thu Feb 19 2026 19:00:00 GMT-0500 (Eastern Standard Time)",
-      status: "published",
-      type: "white-paper",
-      substack: false,
-    },
-    {
-      id: 2,
       title: "Your Experts Won't Train Your AI. You Have to Interview Them.",
       slug: "your-experts-wont-train-your-ai-you-have-to-interview-them",
       excerpt: "The only way to capture true expertise is to build an AI interviewer that earns the trust to be seen as a peer. That is the real technical hurdle. Here is how we cleared it.",
@@ -38,7 +20,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 3,
+      id: 2,
       title: "Real-World LLM Jailbreak: What We Discovered and How We Fixed It",
       slug: "real-world-llm-jailbreak-what-we-discovered-and-how-we-fixed-it",
       excerpt: "Technical deep dive: How our red team scenario uncovered a critical LLM vulnerability and engineered agentic AI defences.",
@@ -56,7 +38,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 4,
+      id: 3,
       title: "Use Case: Scaling Wisdom with an AI Agent",
       slug: "ai-agent-for-crisis-response",
       excerpt: "99Ravens helps scale a veteran marketer's knowledge when he's forced to step back from his business by making an AI Agent for his team.",
@@ -74,7 +56,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 5,
+      id: 4,
       title: "Kyle Monson: A Journalist's Guide to Authentic Communication Strategy & Marketing Design with AI Prompts",
       slug: "kyle-monson-a-journalists-guide-to-authentic-communication-strategy-marketing-design-with-ai-prompts",
       excerpt: "Discover Kyle Monson's proven communication design frameworks that cut through marketing noise with authentic truth-telling and actionable AI tools.",
@@ -92,7 +74,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 6,
+      id: 5,
       title: "Why You're (Probably) Doing Marketing AI Wrong - And How to Fix It",
       slug: "how-to-speed-up-your-marketing-workflow-with-dedicated-ai-agents",
       excerpt: "How to actually increase marketing velocity with AI Agents for the things that actually waste your time and money.",
@@ -110,7 +92,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 7,
+      id: 6,
       title: "99Ravens on 1 Amazing Thing",
       slug: "99ravens-reddit-expert-featured-on-1-amazing-thing",
       excerpt: "99Ravens showcases its Reddit advertising AI Expert on the 1 Amazing Thing podcast. Get platform expertise 24/7 with 99Ravens AI Experts",
@@ -128,7 +110,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 8,
+      id: 7,
       title: "Use Case: AI Drives Use of Marketing Research",
       slug: "ai-for-market-research",
       excerpt: "A market research team deploys 99Ravens to drive utilization of their existing corpus and increase the quality of new requests.",
@@ -146,7 +128,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 9,
+      id: 8,
       title: "Use Case: Fixing Compliance Bottlenecks with AI Agents and Workflows",
       slug: "fixing-compliance-bottlenecks-with-ai-agents-and-workflows",
       excerpt: "99Ravens fixes a compliance bottleneck with pre-approval AI reviewers and a dedicated workflow so campaigns are born compliant",
@@ -164,7 +146,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 10,
+      id: 9,
       title: "Use Case: Managing Agencies with 99Ravens",
       slug: "managing-agency-relationships-with-99ravens",
       excerpt: "A sporting goods company managing seven agency relationships taps 99Ravens to conduct the flow of information and boost brand compliance.",
@@ -182,7 +164,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 11,
+      id: 10,
       title: "Sabaa Quao Becomes Software: The Architect of Enduring Strategy",
       slug: "sabaa-quao-becomes-software",
       excerpt: "Discover how Sabaa Quao's typically expensive strategic expertise becomes accessible software, empowering you to guide campaigns for enduring uniqueness and long-term impact.",
@@ -200,7 +182,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 12,
+      id: 11,
       title: "The Authority Gap: Mastering YouTube for B2B Thought Leadership",
       slug: "b2b-youtube-strategy-transform-content-into-ai-powered-thought-leadership-engine",
       excerpt: "Transform B2B YouTube from content repository to AI-powered thought leadership engine with proven strategies, automation frameworks, and tactical blueprints for measurable business growth.",
@@ -218,7 +200,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 13,
+      id: 12,
       title: "Beyond the Inbox: How to Transform Your Email Marketing from a Manual Chore into AI-powered Audience Engagement",
       slug: "ai-email-marketing-transform-manual-campaigns-into-automated-audience-engagement-systems",
       excerpt: "Transform email marketing from manual chore to AI-powered audience engagement system with proven automation strategies, segmentation frameworks, and actionable tactics for measurable results.",
@@ -236,7 +218,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 14,
+      id: 13,
       title: "Reddit's ROI Riddle: From Resource Drain to Strategic Advantage with Software",
       slug: "reddits-roi-riddle-from-resource-drain-to-strategic-advantage-with-software",
       excerpt: "Transform Reddit marketing from resource drain to strategic asset with AI-powered community engagement strategies, proven frameworks, and measurable ROI tactics for enterprise success.",
@@ -254,7 +236,7 @@ const blogData = {
       substack: false,
     },
     {
-      id: 15,
+      id: 14,
       title: "Beyond the SEO Black Box: How Your Organic Visibility Becomes Scalable Software",
       slug: "seo-automation-transform-organic-visibility-from-black-box-to-scalable-software-with-ai",
       excerpt: "Transform enterprise SEO from manual black box to scalable AI-powered system with automated visibility strategies, proven frameworks, and actionable blueprints for measurable organic growth.",
