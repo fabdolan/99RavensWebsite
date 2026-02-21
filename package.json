@@ -1,0 +1,22 @@
+{
+  "name": "99ravens-website",
+  "version": "1.0.0",
+  "description": "99Ravens content pipeline — Markdown to static HTML",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-content.js",
+    "dev": "npm run build && npx http-server . -p 3000 -o /resources/blogs/",
+    "new": "node scripts/new-content.js"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^12.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

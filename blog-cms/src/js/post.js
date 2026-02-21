@@ -77,10 +77,8 @@ class PostPage {
     }
 
     renderArticleBody() {
-        const container = document.getElementById('articleContent');
-        if (!container) return;
-
-        container.innerHTML = this.post.content;
+        // Content is now baked into the HTML by the build script — do not overwrite it.
+        // This method is intentionally a no-op. post.js handles hero, related posts, and share only.
     }
 
     renderRelatedPosts() {

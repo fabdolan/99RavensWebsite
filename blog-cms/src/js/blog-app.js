@@ -7,8 +7,13 @@ class BlogApp {
         this.init();
     }
 
-    getPostUrl(slug) {
-        return `/resources/blogs/${slug}/`;
+    getPostUrl(post) {
+        if (post.type === 'case-study') {
+            return `/resources/case-studies/${post.slug}/`;
+        } else if (post.type === 'white-paper') {
+            return `/resources/white-papers/${post.slug}/`;
+        }
+        return `/resources/blogs/${post.slug}/`;
     }
 
     init() {
@@ -60,9 +65,13 @@ class BlogApp {
             }
         });
 
-        // Filter posts
+        // Filter posts — type-level filters use the `type` field, category filters use `category`
         if (category === 'all') {
             this.filteredPosts = [...this.allPosts];
+        } else if (category === 'white-papers') {
+            this.filteredPosts = this.allPosts.filter(post => post.type === 'white-paper');
+        } else if (category === 'newsletter') {
+            this.filteredPosts = this.allPosts.filter(post => post.type === 'newsletter' || post.substack === true);
         } else {
             this.filteredPosts = this.allPosts.filter(post => post.category === category);
         }
@@ -90,7 +99,9 @@ class BlogApp {
         container.querySelectorAll('.blog-post-item').forEach(item => {
             item.addEventListener('click', () => {
                 const slug = item.dataset.slug;
-                window.location.href = this.getPostUrl(slug);
+                const type = item.dataset.type;
+                const post = { slug, type };
+                window.location.href = this.getPostUrl(post);
             });
         });
     }
@@ -99,14 +110,16 @@ class BlogApp {
         const num = String(index + 1).padStart(2, '0');
         const categoryName = this.getCategoryName(post.category);
         const formattedDate = this.formatDateShort(post.publishedAt);
+        const typeBadge = this.getTypeBadge(post.type);
 
         return `
-            <div class="blog-post-item" data-slug="${post.slug}">
+            <div class="blog-post-item" data-slug="${post.slug}" data-type="${post.type || 'article'}">
                 <span class="blog-post-num">${num}</span>
                 <div class="blog-post-body">
                     <div class="blog-post-meta-row">
                         <span class="blog-post-date">${formattedDate}</span>
                         <span class="blog-post-category">${categoryName}</span>
+                        ${typeBadge}
                     </div>
                     <div class="blog-post-title">${post.title}</div>
                     <div class="blog-post-summary">${post.excerpt}</div>
@@ -116,11 +129,23 @@ class BlogApp {
         `;
     }
 
+    getTypeBadge(type) {
+        if (!type || type === 'article') return '';
+        const badges = {
+            'case-study':  { label: 'Case Study',  bg: '#F66302', color: '#FFFFFF', border: 'none' },
+            'white-paper': { label: 'White Paper', bg: '#000000', color: '#FFFFFF', border: 'none' },
+            'newsletter':  { label: 'Newsletter',  bg: '#D2D0BD', color: '#1A1A1A', border: '1px solid rgba(26,26,26,0.3)' }
+        };
+        const b = badges[type];
+        if (!b) return '';
+        return `<span class="content-type-badge" style="background:${b.bg};color:${b.color};border:${b.border}">${b.label}</span>`;
+    }
+
     updateFilterCount() {
         const countEl = document.getElementById('filterCount');
         if (countEl) {
             const count = this.filteredPosts.length;
-            countEl.textContent = `${count} article${count !== 1 ? 's' : ''}`;
+            countEl.textContent = `${count} item${count !== 1 ? 's' : ''}`;
         }
     }
 
